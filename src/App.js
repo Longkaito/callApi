@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Read from "./components/read";
+import Create from "./components/create";
+import Update from "./components/update";
+import "./App.scss";
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
+  const [id, setId] = useState();
+  function handleUpdate(id) {
+    setId(id);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="box">
+        <h2>CRUD ReactJS</h2>
+
+        <Routes>
+          <Route path="" element={<Read handleUpdate={handleUpdate} />}></Route>
+          <Route
+            path="/read"
+            element={<Read handleUpdate={handleUpdate} />}
+          ></Route>
+          <Route path="/create" element={<Create />}></Route>
+          <Route path="/update" element={<Update id={id} />}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }

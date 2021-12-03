@@ -1,0 +1,125 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #17202a;
+  .box {
+    color: #fff;
+    h2 {
+      text-align: center;
+    }
+    padding-top: 150px;
+    margin: 0 auto;
+    .create,
+    .update {
+      form {
+        margin-bottom: 10px;
+        label:not(:last-child) {
+          display: block;
+          padding-bottom: 5px;
+        }
+        input {
+          padding: 10px;
+          outline: none;
+          border: none;
+          border-radius: 3px;
+          width: 250px;
+        }
+        &:nth-child(3) {
+          input {
+            width: 15px;
+            margin-right: 10px;
+          }
+        }
+      }
+      button,
+      .back {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+          background-color: #ccc;
+        }
+        &:last-child {
+          float: right;
+        }
+        i {
+          padding-right: 10px;
+        }
+      }
+      .back {
+        color: #fff;
+        background-color: #85c1e9;
+        background-image: linear-gradient(to bottom right, #85c1e9, #7d3c98);
+        display: inline-block;
+        padding: 8px 20px;
+      }
+    }
+    .update {
+      .updateData {
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 10px 25px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        // float: right;
+        &:hover {
+          cursor: pointer;
+          background-color: #ccc;
+        }
+      }
+      &__button {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .read {
+      color: #17202a;
+      .read__add {
+        display: inline-block;
+        margin: 10px 0 5px;
+        padding: 8px 25px;
+        border-radius: 5px;
+        border: none;
+        background-color: #a569bd;
+        background-image: linear-gradient(to bottom right, #a569bd, #3498db);
+        color: #fff;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+      table {
+        width: 600px;
+        background-color: #fff;
+        td {
+          padding: 5px 10px;
+          .update-button,
+          button {
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            background-color: #e74c3c;
+            &:hover {
+              cursor: pointer;
+              opacity: 0.8;
+            }
+          }
+          .update-button {
+            background-color: #27ae60;
+          }
+        }
+      }
+      table,
+      tr {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+    }
+  }
+}
